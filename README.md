@@ -9,6 +9,7 @@ SQL ENGINE USED = MYSQL
 DATABASE NAME = main
 
 DATABASE SCHEMA =>
+
     agent (id<varchar>,password<varchar>)
     
     tasks (taskid<int><pk>,id<varchar>,title<varchar>,description<varchar>,category<varchar>,due_date<date>)
@@ -23,11 +24,14 @@ Request Data: {
 }
 
 If successful,
+
 Response Data: {
     'status':'account created',
     'status_code': 200
 }
+
 else
+
 Response Data: {
     'status':'failure',
     'status_code': 401
@@ -45,12 +49,15 @@ Request Data: {
 // PASSWORD STORED IN A SALTED HASH FORMAT
 
 If successful,
+
 Response Data: {
     'status': 'success',
     'agent_id': str,
     'status_code': 200
 }
+
 else
+
 Response Data: {
     'status':'failure',
     'status_code': 401
